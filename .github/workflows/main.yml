@@ -3,7 +3,7 @@ name: Build and Deploy Vite app to GitHub Pages
 on:
   push:
     branches:
-      - main  # change this if your default branch is different
+      - main  # Change if your main branch has a different name
 
 jobs:
   build-deploy:
@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # use your preferred Node version
+          node-version: '18'
 
       - name: Install dependencies
         run: npm ci
