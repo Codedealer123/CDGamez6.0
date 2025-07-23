@@ -1,5 +1,7 @@
 <!-- src/App.svelte -->
 <script>
+// @ts-nocheck
+
     import { onMount, tick } from 'svelte';
     import Router from 'svelte-spa-router'
     import { push } from 'svelte-spa-router';
@@ -262,7 +264,7 @@
 </script>
 
 <!-- Main container for the console UI -->
-<div class="console-container">
+<div class="console-container" style="min-height: 100vh; display: flex; flex-direction: column;">
     <!-- Top Bar: Displays user profile, time, Wi-Fi, and battery status -->
     <header class="top-bar">
         <div class="user-profile">
@@ -298,7 +300,9 @@
         <button class="nav-button" aria-label="Power Off"><i class="fas fa-power-off"></i></button>
     </nav>
     <!-- Main Content Area: Displays the current page content -->
-    <Router {routes} />
+    <div style="flex: 1 1 auto; overflow-y: auto;">
+        <Router {routes} />
+    </div>
 
     <!-- Bottom Bar: Displays device info and action buttons -->
     <footer class="bottom-bar">
@@ -315,7 +319,7 @@
 
 <!-- Iframe Overlay (conditionally rendered) -->
 {#if showIframe}
-<div id={iframeId} class="iframe-overlay">
+<div id={iframeId} class="iframe-overlay" style="display: flex; align-items: center; justify-content: center;">
     <div class="iframe-wrapper">
         <iframe bind:this={iframeElement} src={iframeUrl} class="iframe-content" allowfullscreen frameborder="0" title="External Content"></iframe>
         <button class="iframe-close-btn" on:click={closeIframe}>&times;</button>

@@ -1,5 +1,7 @@
 <!-- src/components/GameList.svelte -->
 <script>
+// @ts-nocheck
+
     // No script logic needed for these static game titles for now.
     // If you later fetch game data, this is where that logic would go.
 </script>
