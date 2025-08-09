@@ -266,7 +266,7 @@
 <!-- Main container for the console UI -->
 <div class="console-container" style="min-height: 100vh; display: flex; flex-direction: column;">
     <!-- Top Bar: Displays user profile, time, Wi-Fi, and battery status -->
-    <header class="top-bar">
+     <header class="top-bar">
         <div class="user-profile">
             <svg class="w-8 h-8 rounded-full bg-blue-500 text-white p-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
@@ -300,9 +300,9 @@
         <button class="nav-button" aria-label="Power Off"><i class="fas fa-power-off"></i></button>
     </nav>
     <!-- Main Content Area: Displays the current page content -->
-    <div style="flex: 1 1 auto; overflow-y: auto;">
+    <main class="router-center">
         <Router {routes} />
-    </div>
+    </main>
 
     <!-- Bottom Bar: Displays device info and action buttons -->
     <footer class="bottom-bar">

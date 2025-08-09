@@ -31,10 +31,3 @@
         <!-- Add more game icons here as needed -->
     </section>
 </main>
-
-<style>
-    /* These styles are specific to the GameList component if needed,
-       but the main layout and styling for .game-icons-wrapper,
-       .game-icons-scroll-container, and .game-icon-placeholder
-       are still in global.css and will apply. */
-</style>
