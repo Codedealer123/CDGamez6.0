@@ -282,6 +282,10 @@
             </span>
         </div>
     </header>
+        <!-- Main Content Area: Displays the current page content -->
+    <main class="router-center">
+        <Router {routes} />
+    </main>
     <!-- Navigation Buttons Section: Circular buttons for various console functions -->
     <nav class="nav-buttons-section">
         <button class="nav-button" aria-label="Messages"><i class="fas fa-comment-dots"></i></button>
@@ -299,11 +303,6 @@
         </button>
         <button class="nav-button" aria-label="Power Off"><i class="fas fa-power-off"></i></button>
     </nav>
-    <!-- Main Content Area: Displays the current page content -->
-    <main class="router-center">
-        <Router {routes} />
-    </main>
-
     <!-- Bottom Bar: Displays device info and action buttons -->
     <footer class="bottom-bar">
         <div class="device-info">
